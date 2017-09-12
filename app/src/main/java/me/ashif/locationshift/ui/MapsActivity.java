@@ -15,7 +15,6 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -63,7 +62,6 @@ public class MapsActivity extends FragmentActivity
   private double mFinalLat, mFinalLong;
   private DataManager mDataManager;
   private Polyline mPolyline;
-  private boolean mReady;
   private ArrayList<LatLng> mMarkerpointList;
   private ConnectionUtils mConnectionUtils;
 
@@ -92,13 +90,14 @@ public class MapsActivity extends FragmentActivity
     } catch (Exception ex) {
     }
     if (!gpsEnabled) {
-      mDialogUtils.showGenericDialog("Hmm,smells like Location is disabled","Error",(d,i) -> openLocationSettings());
+      mDialogUtils.showGenericDialog("Hmm,smells like Location is disabled", "Error",
+          (d, i) -> openLocationSettings());
     }
     return gpsEnabled;
   }
 
   private void openLocationSettings() {
-    Intent myIntent = new Intent( Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+    Intent myIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
     startActivity(myIntent);
   }
 
@@ -128,6 +127,8 @@ public class MapsActivity extends FragmentActivity
       mMap.animateCamera(zoom);
 
       mMarkerpointList.add(new LatLng(mCurrentLat, mCurrentLong));
+    } else {
+      mDialogUtils.showToast("Last location couldn't be retreived,please try again");
     }
   }
 
@@ -147,8 +148,7 @@ public class MapsActivity extends FragmentActivity
     mMap = googleMap;
     mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     mMap.setTrafficEnabled(true);
-    mReady = true;
-    //geLastLocationAndSetCamera();
+    geLastLocationAndSetCamera(getLastKnownLocation());
   }
 
   @OnClick(R.id.button_start) public void onStartLocationClicked() {
@@ -207,10 +207,6 @@ public class MapsActivity extends FragmentActivity
 
     smartLocation.location(provider).start(this);
     smartLocation.activity().start(this);
-    if (mReady) {
-      geLastLocationAndSetCamera(getLastKnownLocation());
-      mReady = false;
-    }
   }
 
   @Override public void onLocationUpdated(Location location) {
@@ -276,7 +272,8 @@ public class MapsActivity extends FragmentActivity
   }
 
   private Location getLastKnownLocation() {
-    LocationManager LocationManager = (LocationManager)getApplicationContext().getSystemService(LOCATION_SERVICE);
+    LocationManager LocationManager =
+        (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
     List<String> providers = LocationManager.getProviders(true);
     Location bestLocation = null;
     for (String provider : providers) {
