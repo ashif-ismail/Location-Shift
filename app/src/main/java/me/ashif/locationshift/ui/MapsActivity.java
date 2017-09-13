@@ -149,11 +149,18 @@ public class MapsActivity extends FragmentActivity
   }
 
   @OnClick(R.id.button_start) public void onStartLocationClicked() {
-    mDialogUtils.showToast(getString(R.string.text_tracking_start));
     startLocationTrack();
     //disable this button and enable stop button
     mStartButton.setEnabled(false);
     mStopButton.setEnabled(true);
+
+    //todo check required
+    if (mMarkerpointList.size() == 2) {
+      mMap.clear();
+      mMarkerpointList.clear();
+      mMap.addMarker(new MarkerOptions().position(new LatLng(mFinalLat, mFinalLong)));
+    }
+
   }
 
   @OnClick(R.id.button_stop) public void onStopLocationClicked() {
