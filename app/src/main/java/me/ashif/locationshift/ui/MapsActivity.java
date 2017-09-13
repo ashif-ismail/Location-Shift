@@ -113,11 +113,7 @@ public class MapsActivity extends FragmentActivity
   private void setCamera(double lat, double lng) {
     mDialogUtils.ShowProgressDialog(getString(R.string.text_progress));
     final Handler handler = new Handler();
-    final Runnable runnable = new Runnable() {
-      @Override public void run() {
-        mDialogUtils.dismissProgress();
-      }
-    };
+    final Runnable runnable = () -> mDialogUtils.dismissProgress();
     handler.postDelayed(runnable, 3000);
 
     LatLng currentLatLng = new LatLng(lat, lng);
@@ -146,14 +142,13 @@ public class MapsActivity extends FragmentActivity
     mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     mMap.setTrafficEnabled(false);
     mIsMapReady = true;
-    if(getLastKnownLocation() != null) {
-      mCurrentLat = getLastKnownLocation().getLatitude();
-      mCurrentLong = getLastKnownLocation().getLongitude();
-      setCamera(mCurrentLat, mCurrentLong);
-    }
   }
 
   @OnClick(R.id.button_start) public void onStartLocationClicked() {
+    // TODO: 9/13/2017 check required
+    if (mPolyline != null) {
+      mPolyline.remove();
+    }
     startLocationTrack();
     //disable this button and enable stop button
     mStartButton.setEnabled(false);
