@@ -146,6 +146,11 @@ public class MapsActivity extends FragmentActivity
     mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     mMap.setTrafficEnabled(false);
     mIsMapReady = true;
+    if(getLastKnownLocation() != null) {
+      mCurrentLat = getLastKnownLocation().getLatitude();
+      mCurrentLong = getLastKnownLocation().getLongitude();
+      setCamera(mCurrentLat, mCurrentLong);
+    }
   }
 
   @OnClick(R.id.button_start) public void onStartLocationClicked() {
@@ -155,7 +160,7 @@ public class MapsActivity extends FragmentActivity
     mStopButton.setEnabled(true);
 
     //todo check required
-    if (mMarkerpointList.size() == 2) {
+    if (mMarkerpointList.size() > 2) {
       mMap.clear();
       mMarkerpointList.clear();
       mMap.addMarker(new MarkerOptions().position(new LatLng(mFinalLat, mFinalLong)));
