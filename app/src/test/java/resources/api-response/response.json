@@ -1,0 +1,1095 @@
+{
+  "geocoded_waypoints": [
+    {
+      "geocoder_status": "OK",
+      "place_id": "ChIJVz1qsZo_rjsRGtzG26CzW9o",
+      "types": [
+        "route"
+      ]
+    },
+    {
+      "geocoder_status": "OK",
+      "place_id": "ChIJB-bpXcg9rjsRd6zAPpXjpTU",
+      "types": [
+        "street_address"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "bounds": {
+        "northeast": {
+          "lat": 12.9842886,
+          "lng": 77.531078
+        },
+        "southwest": {
+          "lat": 12.8849023,
+          "lng": 77.5161703
+        }
+      },
+      "copyrights": "Map data ©2017 Google",
+      "legs": [
+        {
+          "distance": {
+            "text": "14.0 km",
+            "value": 13973
+          },
+          "duration": {
+            "text": "3 hours 0 mins",
+            "value": 10792
+          },
+          "end_address": "65/4A, 4th Main Rd, Govindaraja Nagar Ward, Priyadarshini Layout, Vijaya Nagar, Bengaluru, Karnataka 560079, India",
+          "end_location": {
+            "lat": 12.9842886,
+            "lng": 77.525994
+          },
+          "start_address": "Forest Blvd, Thurahalli, Bengaluru, Karnataka 560062, India",
+          "start_location": {
+            "lat": 12.8853192,
+            "lng": 77.5263384
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "56 m",
+                "value": 56
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 47
+              },
+              "end_location": {
+                "lat": 12.8848978,
+                "lng": 77.5264819
+              },
+              "html_instructions": "Head <b>south</b> toward <b>Forest Blvd</b>",
+              "polyline": {
+                "points": "gtsmAszdxMF?P@F?DAH@L?BEDGDEBG?A"
+              },
+              "start_location": {
+                "lat": 12.8853192,
+                "lng": 77.5263384
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.5 km",
+                "value": 480
+              },
+              "duration": {
+                "text": "7 mins",
+                "value": 440
+              },
+              "end_location": {
+                "lat": 12.8882458,
+                "lng": 77.5281593
+              },
+              "html_instructions": "Turn <b>left</b> onto <b>Forest Blvd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "sqsmAo{dxMsC_@kA[KAOCi@G]Ek@Ky@Ua@IIAMAK?Q@Q@E?C?CAAA?C?A@C@EBEDG@E@E@EAG?CAEACCACCCAOECCAACG?E?I@O?K?GAEAGCGCECCECCCCAGAGAMCa@EEA"
+              },
+              "start_location": {
+                "lat": 12.8848978,
+                "lng": 77.5264819
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.5 km",
+                "value": 464
+              },
+              "duration": {
+                "text": "7 mins",
+                "value": 409
+              },
+              "end_location": {
+                "lat": 12.891115,
+                "lng": 77.53044849999999
+              },
+              "html_instructions": "Continue onto <b>Turahalli DH</b><div style=\"font-size:0.9em\">Pass by Turahalli forest boulders (on the left in 41&nbsp;m)</div>",
+              "polyline": {
+                "points": "qftmA_fexMMMUMKGGIAIAIESCW@EBEFUCKIGGCOAG?S?MCICGAQQCIEKKAGBM@IASIMIMIIESEWAQ?M?M?KAMEI?MGKIOMOEKEMAIGCGIOIKMMGMKSEQCMAQ"
+              },
+              "start_location": {
+                "lat": 12.8882458,
+                "lng": 77.5281593
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.1 km",
+                "value": 114
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 78
+              },
+              "end_location": {
+                "lat": 12.8921121,
+                "lng": 77.5306601
+              },
+              "html_instructions": "Turn <b>left</b> to stay on <b>Turahalli DH</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "oxtmAitexMMEgCOIAEAEACAUK"
+              },
+              "start_location": {
+                "lat": 12.891115,
+                "lng": 77.53044849999999
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.6 km",
+                "value": 596
+              },
+              "duration": {
+                "text": "7 mins",
+                "value": 406
+              },
+              "end_location": {
+                "lat": 12.8928759,
+                "lng": 77.52538059999999
+              },
+              "html_instructions": "Turn <b>left</b> onto <b>80 Feet Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "u~tmAsuexMwBxE]fAIVERCL?DAFALAX?fA?TBv@?|@PxL"
+              },
+              "start_location": {
+                "lat": 12.8921121,
+                "lng": 77.5306601
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "58 m",
+                "value": 58
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 42
+              },
+              "end_location": {
+                "lat": 12.8933995,
+                "lng": 77.52537199999999
+              },
+              "html_instructions": "Turn <b>right</b> toward <b>BDA Link Rd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "ocumAstdxMw@@o@?"
+              },
+              "start_location": {
+                "lat": 12.8928759,
+                "lng": 77.52538059999999
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "58 m",
+                "value": 58
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 44
+              },
+              "end_location": {
+                "lat": 12.8933842,
+                "lng": 77.52483409999999
+              },
+              "html_instructions": "Turn <b>left</b> toward <b>BDA Link Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "wfumAqtdxM@p@@x@"
+              },
+              "start_location": {
+                "lat": 12.8933995,
+                "lng": 77.52537199999999
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.2 km",
+                "value": 154
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 103
+              },
+              "end_location": {
+                "lat": 12.894767,
+                "lng": 77.5247971
+              },
+              "html_instructions": "Turn <b>right</b> toward <b>BDA Link Rd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "sfumAeqdxMG?gA?mA@y@@}@@"
+              },
+              "start_location": {
+                "lat": 12.8933842,
+                "lng": 77.52483409999999
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.2 km",
+                "value": 191
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 144
+              },
+              "end_location": {
+                "lat": 12.8947805,
+                "lng": 77.523033
+              },
+              "html_instructions": "Turn <b>left</b> toward <b>BDA Link Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "ioumA_qdxMA`J"
+              },
+              "start_location": {
+                "lat": 12.894767,
+                "lng": 77.5247971
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.9 km",
+                "value": 880
+              },
+              "duration": {
+                "text": "11 mins",
+                "value": 677
+              },
+              "end_location": {
+                "lat": 12.9026648,
+                "lng": 77.5235138
+              },
+              "html_instructions": "Turn <b>right</b> onto <b>BDA Link Rd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "koumA}edxMeAEaCEC?oFOaAOqA?iDKmAE}@CqAEuAEcD?oACo@Gc@Bm@Cq@Aq@A_@A"
+              },
+              "start_location": {
+                "lat": 12.8947805,
+                "lng": 77.523033
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "82 m",
+                "value": 82
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 64
+              },
+              "end_location": {
+                "lat": 12.9033023,
+                "lng": 77.5233415
+              },
+              "html_instructions": "Turn <b>left</b> toward <b>Dr.Vishnuvardhan Rd</b>/<b>Uttarahalli Main Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "s`wmA}hdxM?FADABCBC@A@I?i@@_@AO@MD"
+              },
+              "start_location": {
+                "lat": 12.9026648,
+                "lng": 77.5235138
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "63 m",
+                "value": 63
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 46
+              },
+              "end_location": {
+                "lat": 12.9031341,
+                "lng": 77.5227833
+              },
+              "html_instructions": "Turn <b>left</b> onto <b>Dr.Vishnuvardhan Rd</b>/<b>Uttarahalli Main Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "sdwmA{gdxMJd@ThA"
+              },
+              "start_location": {
+                "lat": 12.9033023,
+                "lng": 77.5233415
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.1 km",
+                "value": 134
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 100
+              },
+              "end_location": {
+                "lat": 12.9042904,
+                "lng": 77.5224291
+              },
+              "html_instructions": "Turn <b>right</b> toward <b>Jawaharlal Nehru Rd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "qcwmAkddxMsAXIBmAVi@JQB"
+              },
+              "start_location": {
+                "lat": 12.9031341,
+                "lng": 77.5227833
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.2 km",
+                "value": 150
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 99
+              },
+              "end_location": {
+                "lat": 12.9043315,
+                "lng": 77.5210438
+              },
+              "html_instructions": "Turn <b>left</b> toward <b>Jawaharlal Nehru Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "yjwmAebdxMAD?F?HAbA?ZAz@?VAhA"
+              },
+              "start_location": {
+                "lat": 12.9042904,
+                "lng": 77.5224291
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "2.0 km",
+                "value": 2007
+              },
+              "duration": {
+                "text": "25 mins",
+                "value": 1476
+              },
+              "end_location": {
+                "lat": 12.9223397,
+                "lng": 77.5206477
+              },
+              "html_instructions": "Turn <b>right</b> onto <b>Jawaharlal Nehru Rd</b><div style=\"font-size:0.9em\">Pass by Corona Banquet Hall (on the right in 160&nbsp;m)</div>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "akwmAoycxMq@?gAAuA?uFBm@?q@@uC@qAAyA@mD?wAByBBiBFa@?s@@{GVS@mFVaBBM?cFNeGNgBFuC?U?yBHmABI@oBGGAkAIcGa@o@AS?"
+              },
+              "start_location": {
+                "lat": 12.9043315,
+                "lng": 77.5210438
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.2 km",
+                "value": 244
+              },
+              "duration": {
+                "text": "3 mins",
+                "value": 167
+              },
+              "end_location": {
+                "lat": 12.9225928,
+                "lng": 77.51841560000001
+              },
+              "html_instructions": "Turn <b>left</b> toward <b>8th Main Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "s{zmAawcxMQ`CGtAGbAGjAGtA"
+              },
+              "start_location": {
+                "lat": 12.9223397,
+                "lng": 77.5206477
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.9 km",
+                "value": 948
+              },
+              "duration": {
+                "text": "12 mins",
+                "value": 696
+              },
+              "end_location": {
+                "lat": 12.9308465,
+                "lng": 77.5190475
+              },
+              "html_instructions": "Turn <b>right</b> at <b>Basaveshwara Cir</b> onto <b>8th Main Rd</b><div style=\"font-size:0.9em\">Pass by VSan Mart (on the left in 240&nbsp;m)</div>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "e}zmAcicxMe@AK?O?W@qAR_AFiEZmCRq@F_AHeAA}@?w@@{@@cBI}AEu@?e@AYE_@Ii@Ug@O_@MA?MG_@O_@QAAiD{A"
+              },
+              "start_location": {
+                "lat": 12.9225928,
+                "lng": 77.51841560000001
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.4 km",
+                "value": 374
+              },
+              "duration": {
+                "text": "5 mins",
+                "value": 294
+              },
+              "end_location": {
+                "lat": 12.9326723,
+                "lng": 77.5161703
+              },
+              "html_instructions": "Turn <b>left</b> toward <b>Rajarajeshwari Temple Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "yp|mAamcxM[z@w@rBM\\EJKXKROZe@r@Y^w@fAm@x@s@`AAB"
+              },
+              "start_location": {
+                "lat": 12.9308465,
+                "lng": 77.5190475
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.5 km",
+                "value": 494
+              },
+              "duration": {
+                "text": "6 mins",
+                "value": 362
+              },
+              "end_location": {
+                "lat": 12.9364185,
+                "lng": 77.5183553
+              },
+              "html_instructions": "Turn <b>right</b> after Corporation Bank (on the left)<div style=\"font-size:0.9em\">Pass by the gas station (on the right in 30&nbsp;m)</div>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "e||mAa{bxMoA}@k@a@oBsAcAo@m@c@c@g@UW]UKIGECAsAa@qB_@YE]Ia@J"
+              },
+              "start_location": {
+                "lat": 12.9326723,
+                "lng": 77.5161703
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "1.2 km",
+                "value": 1171
+              },
+              "duration": {
+                "text": "15 mins",
+                "value": 915
+              },
+              "end_location": {
+                "lat": 12.9432013,
+                "lng": 77.5261533
+              },
+              "html_instructions": "Turn <b>right</b> onto <b>Mysore Rd</b><div style=\"font-size:0.9em\">Pass by KPTCL (on the right in 190&nbsp;m)</div>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "ss}mAwhcxM?K?KCWAIEa@AEKs@Ms@Uw@Qo@Og@Sq@CGA?CGCEGMEEWWaA{@w@u@g@k@_@k@_@i@EGa@y@kAsBCCEGEGQSOOCE_@[]WSSo@i@YWo@k@g@c@iAu@c@U[UUOcAq@]Qs@a@{Aw@QI_@SUOSKOKe@o@"
+              },
+              "start_location": {
+                "lat": 12.9364185,
+                "lng": 77.5183553
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "14 m",
+                "value": 14
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 14
+              },
+              "end_location": {
+                "lat": 12.9432577,
+                "lng": 77.5260426
+              },
+              "html_instructions": "Turn <b>left</b> toward <b>Railway Gate Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "_~~mAmydxMKT"
+              },
+              "start_location": {
+                "lat": 12.9432013,
+                "lng": 77.5261533
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "79 m",
+                "value": 79
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 58
+              },
+              "end_location": {
+                "lat": 12.9437993,
+                "lng": 77.5265156
+              },
+              "html_instructions": "Turn <b>right</b> toward <b>Railway Gate Rd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "k~~mAwxdxMoAeA[Y"
+              },
+              "start_location": {
+                "lat": 12.9432577,
+                "lng": 77.5260426
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.2 km",
+                "value": 150
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 105
+              },
+              "end_location": {
+                "lat": 12.9445664,
+                "lng": 77.5254109
+              },
+              "html_instructions": "Turn <b>left</b> onto <b>Railway Gate Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "wa_nAw{dxMAHCLAFCFAFCDADCDABCBEBCBGBEBEBEBCBCDCBEDCFEFQXA??@?@g@x@"
+              },
+              "start_location": {
+                "lat": 12.9437993,
+                "lng": 77.5265156
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.5 km",
+                "value": 451
+              },
+              "duration": {
+                "text": "6 mins",
+                "value": 350
+              },
+              "end_location": {
+                "lat": 12.9483226,
+                "lng": 77.5267183
+              },
+              "html_instructions": "Turn <b>right</b> at <b>Nayandahalli Main Rd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "qf_nAytdxM[Si@WUK[QSKIEECCECCCECEAACCA?AAAAg@OMCGCc@MkAa@_@IKCKCMAYCg@C}@GsAO_@EQAI?KAe@?"
+              },
+              "start_location": {
+                "lat": 12.9445664,
+                "lng": 77.5254109
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "1.0 km",
+                "value": 1046
+              },
+              "duration": {
+                "text": "15 mins",
+                "value": 922
+              },
+              "end_location": {
+                "lat": 12.9574515,
+                "lng": 77.5285608
+              },
+              "html_instructions": "Continue onto <b>Gangagondana Halli Rd</b><div style=\"font-size:0.9em\">Pass by Mamta super Bazar (on the right in 750&nbsp;m)</div>",
+              "polyline": {
+                "points": "_~_nA_}dxM]Am@?i@AgAGm@Co@Go@EQC_@Cm@GE?i@Im@Gk@Go@Ga@EE?g@EE?k@Gi@EyAQG?e@Ii@Ge@Ik@KWEe@Kq@QsAYaAWAAkAWaIqBCAKCGBG@I@s@FC@C?C@C@A@EB"
+              },
+              "start_location": {
+                "lat": 12.9483226,
+                "lng": 77.5267183
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.4 km",
+                "value": 364
+              },
+              "duration": {
+                "text": "4 mins",
+                "value": 250
+              },
+              "end_location": {
+                "lat": 12.9605447,
+                "lng": 77.5296561
+              },
+              "html_instructions": "Slight <b>right</b> onto <b>2nd Cross Rd</b><div style=\"font-size:0.9em\">Pass by Karnataka Power Transmission Corporation-KPTCL (on the left in 150&nbsp;m)</div>",
+              "maneuver": "turn-slight-right",
+              "polyline": {
+                "points": "awanAohexMICw@QeAY{Bk@QEgGyAc@Mg@Q"
+              },
+              "start_location": {
+                "lat": 12.9574515,
+                "lng": 77.5285608
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "52 m",
+                "value": 52
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 35
+              },
+              "end_location": {
+                "lat": 12.9609967,
+                "lng": 77.5297957
+              },
+              "html_instructions": "At Spirit Jct, continue onto <b>8th Cross Rd</b>",
+              "polyline": {
+                "points": "kjbnAkoexM{A["
+              },
+              "start_location": {
+                "lat": 12.9605447,
+                "lng": 77.5296561
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "1.1 km",
+                "value": 1117
+              },
+              "duration": {
+                "text": "15 mins",
+                "value": 922
+              },
+              "end_location": {
+                "lat": 12.9709031,
+                "lng": 77.531078
+              },
+              "html_instructions": "Continue straight onto <b>1st Main Rd</b>/<b>6th Cross Rd</b><div style=\"font-size:0.9em\">Continue to follow 1st Main Rd</div>",
+              "maneuver": "straight",
+              "polyline": {
+                "points": "gmbnAgpexMC?gCg@_@IG?OAE?GAg@AQAMCk@Gy@OeAQoAOoAIq@AiAHgEAaBEc@A}EA[AY?{@@o@EkAOUCGAc@IkAMw@KwAOs@K]G{@OSE"
+              },
+              "start_location": {
+                "lat": 12.9609967,
+                "lng": 77.5297957
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.2 km",
+                "value": 209
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 147
+              },
+              "end_location": {
+                "lat": 12.9712796,
+                "lng": 77.5291866
+              },
+              "html_instructions": "Turn <b>left</b> to stay on <b>1st Main Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "ckdnAgxexMOrAIr@Kz@K|@M|@Kx@"
+              },
+              "start_location": {
+                "lat": 12.9709031,
+                "lng": 77.531078
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "37 m",
+                "value": 37
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 31
+              },
+              "end_location": {
+                "lat": 12.971603,
+                "lng": 77.5292569
+              },
+              "html_instructions": "Turn <b>right</b> onto <b>1st Main Rd</b>/<b>2nd Cross Rd</b>/<b>Saraswathi Nagar Main Rd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "omdnAmlexMWAg@K"
+              },
+              "start_location": {
+                "lat": 12.9712796,
+                "lng": 77.5291866
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.2 km",
+                "value": 150
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 106
+              },
+              "end_location": {
+                "lat": 12.9727429,
+                "lng": 77.5285604
+              },
+              "html_instructions": "Turn <b>left</b> at <b>7th Cross Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "oodnA{lexMON_@\\i@`@SHGBMFy@Le@V"
+              },
+              "start_location": {
+                "lat": 12.971603,
+                "lng": 77.5292569
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "9 m",
+                "value": 9
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 7
+              },
+              "end_location": {
+                "lat": 12.9728113,
+                "lng": 77.5286017
+              },
+              "html_instructions": "Turn <b>right</b> onto <b>Nagarabhavi Main Rd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "svdnAohexMGCEC"
+              },
+              "start_location": {
+                "lat": 12.9727429,
+                "lng": 77.5285604
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "4 m",
+                "value": 4
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 8
+              },
+              "end_location": {
+                "lat": 12.972815,
+                "lng": 77.5285621
+              },
+              "html_instructions": "Turn <b>left</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "awdnAwhexMAF"
+              },
+              "start_location": {
+                "lat": 12.9728113,
+                "lng": 77.5286017
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.1 km",
+                "value": 117
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 79
+              },
+              "end_location": {
+                "lat": 12.9738688,
+                "lng": 77.5286308
+              },
+              "html_instructions": "Turn <b>right</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "cwdnAohexM_ACgACiAE"
+              },
+              "start_location": {
+                "lat": 12.972815,
+                "lng": 77.5285621
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.2 km",
+                "value": 169
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 120
+              },
+              "end_location": {
+                "lat": 12.9739819,
+                "lng": 77.5270741
+              },
+              "html_instructions": "Turn <b>left</b> toward <b>Patteghar Palya Main Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "u}dnA}hexMUvH"
+              },
+              "start_location": {
+                "lat": 12.9738688,
+                "lng": 77.5286308
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "38 m",
+                "value": 38
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 25
+              },
+              "end_location": {
+                "lat": 12.9743233,
+                "lng": 77.5270803
+              },
+              "html_instructions": "Turn <b>right</b> toward <b>Patteghar Palya Main Rd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "k~dnAe_exMcAA"
+              },
+              "start_location": {
+                "lat": 12.9739819,
+                "lng": 77.5270741
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "63 m",
+                "value": 63
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 51
+              },
+              "end_location": {
+                "lat": 12.9743464,
+                "lng": 77.5264961
+              },
+              "html_instructions": "Turn <b>left</b> at Mayuravarma Hitharakshana Vedike toward <b>Patteghar Palya Main Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "o`enAg_exMClBAD"
+              },
+              "start_location": {
+                "lat": 12.9743233,
+                "lng": 77.5270803
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.2 km",
+                "value": 211
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 144
+              },
+              "end_location": {
+                "lat": 12.9762421,
+                "lng": 77.5265431
+              },
+              "html_instructions": "Turn <b>right</b> toward <b>Patteghar Palya Main Rd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "u`enAs{dxMqA?s@By@A{@Ay@EcAA"
+              },
+              "start_location": {
+                "lat": 12.9743464,
+                "lng": 77.5264961
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "10 m",
+                "value": 10
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 8
+              },
+              "end_location": {
+                "lat": 12.9762464,
+                "lng": 77.52645310000001
+              },
+              "html_instructions": "Turn <b>left</b> at Shree Igee Medical Store onto <b>Patteghar Palya Main Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "olenA{{dxMAP"
+              },
+              "start_location": {
+                "lat": 12.9762421,
+                "lng": 77.5265431
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.4 km",
+                "value": 350
+              },
+              "duration": {
+                "text": "5 mins",
+                "value": 273
+              },
+              "end_location": {
+                "lat": 12.9792819,
+                "lng": 77.5257433
+              },
+              "html_instructions": "Turn <b>right</b> at <b>Pategarpalya Cir</b> onto <b>2nd Main Rd</b><div style=\"font-size:0.9em\">Pass by Pooja Medicals &amp; General Stores (on the left in 44&nbsp;m)</div>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "qlenAi{dxMq@HID{Ez@}@RIBa@HIB]D_@F[JIDYB_@@c@EOC"
+              },
+              "start_location": {
+                "lat": 12.9762464,
+                "lng": 77.52645310000001
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "51 m",
+                "value": 51
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 32
+              },
+              "end_location": {
+                "lat": 12.9792884,
+                "lng": 77.5252757
+              },
+              "html_instructions": "Turn <b>left</b> at Shree Raghavendra Engineering Works toward <b>4th Main Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "o_fnA{vdxMAzA"
+              },
+              "start_location": {
+                "lat": 12.9792819,
+                "lng": 77.5257433
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.3 km",
+                "value": 348
+              },
+              "duration": {
+                "text": "5 mins",
+                "value": 327
+              },
+              "end_location": {
+                "lat": 12.9823758,
+                "lng": 77.5256497
+              },
+              "html_instructions": "Turn <b>right</b> toward <b>4th Main Rd</b><div style=\"font-size:0.9em\">Pass by Prakash Electronics (on the right in 110&nbsp;m)</div>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "q_fnA_tdxME?A?q@@K@UAQ?G?m@AK@g@@K?s@Ew@Kk@IMCq@My@Ky@Ky@G"
+              },
+              "start_location": {
+                "lat": 12.9792884,
+                "lng": 77.5252757
+              },
+              "travel_mode": "WALKING"
+            },
+            {
+              "distance": {
+                "text": "0.2 km",
+                "value": 216
+              },
+              "duration": {
+                "text": "3 mins",
+                "value": 169
+              },
+              "end_location": {
+                "lat": 12.9842886,
+                "lng": 77.525994
+              },
+              "html_instructions": "At Royal Impresion, continue onto <b>4th Main Rd</b><div style=\"font-size:0.9em\">Pass by Karnataka Enterprises (on the left in 28&nbsp;m)</div>",
+              "polyline": {
+                "points": "{rfnAivdxMeEc@wBW_AG"
+              },
+              "start_location": {
+                "lat": 12.9823758,
+                "lng": 77.5256497
+              },
+              "travel_mode": "WALKING"
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": []
+        }
+      ],
+      "overview_polyline": {
+        "points": "gtsmAszdxMf@?V@HMHMsCa@wA]y@KiAQ{A_@WC]@W@GA?KLY@WKOYMCM@YCa@QUWIo@ISOa@UISG]A]J[MSWE[?WGYSIUS@W?a@SWOk@Gy@AWEYQOMOEYGa@k@U[Qe@E_@MEgCOOCICUKwBxEg@~AKn@Cf@?|ABtBPxLw@@o@?@p@@x@G?uC@wBBA`JeAEeCEoFOaAOqA?iDKkCIgDKsFCo@Gc@B_BEqACALEFEBs@@o@?MDJd@ThAsAXwAZ{@NALCdDA`ByBAkLDoN@}INoIXaGXyQb@gBFuC?oCHwADwBIoIk@cAAYvEOnCGtAe@A[?iBTiGb@_EZ_AHeAAuB@{@@cBIsCE_AGiA_@gA]oAi@kD}AsAnDk@vAu@nAqAfBaBzBABoA}@{CuBqBsAy@_Ai@_@KGsAa@qB_@w@Oa@J?KCc@Gk@My@c@kBy@qCQ[]]yBqBgAwAe@q@wByDk@q@aCqBiAcAqByA_Ak@yAaA_EuByA{@e@o@KTkB_BG^KZOPWNQPa@n@i@|@wBiAg@[MQIGaBe@kBk@WGmCQoCW}BCqBI}AKoCUiCYuHs@}B[{Co@cFkAeIsBKCGBQBw@HMDEBIC}Bk@yLyCcCm@kCg@}@KoAIeBWuCa@aCKiAHgEAeCGyFCuA@{BUmC]oC[qASoAUYfCq@pF_AMo@l@}@j@UJy@Le@VMGAF_ACqCIUvHcAAErBeCBuBC}BGAPq@HeF`AgAViBZe@Py@Ds@IAzAE?s@@a@?sA?s@@kBQy@Mq@My@KsBS}H{@_AG"
+      },
+      "summary": "1st Main Rd",
+      "warnings": [
+        "Walking directions are in beta.    Use caution – This route may be missing sidewalks or pedestrian paths."
+      ],
+      "waypoint_order": []
+    }
+  ],
+  "status": "OK"
+}
