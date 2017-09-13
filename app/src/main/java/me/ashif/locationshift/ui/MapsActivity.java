@@ -21,6 +21,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.google.android.gms.location.DetectedActivity;
+import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -114,7 +115,7 @@ public class MapsActivity extends FragmentActivity
     mDialogUtils.ShowProgressDialog(getString(R.string.text_progress));
     final Handler handler = new Handler();
     final Runnable runnable = () -> mDialogUtils.dismissProgress();
-    handler.postDelayed(runnable, 3000);
+    handler.postDelayed(runnable, 2500);
 
     LatLng currentLatLng = new LatLng(lat, lng);
     mMap.addMarker(new MarkerOptions().position(currentLatLng));
@@ -145,21 +146,17 @@ public class MapsActivity extends FragmentActivity
   }
 
   @OnClick(R.id.button_start) public void onStartLocationClicked() {
-    // TODO: 9/13/2017 check required
-    if (mPolyline != null) {
-      mPolyline.remove();
-    }
     startLocationTrack();
     //disable this button and enable stop button
     mStartButton.setEnabled(false);
     mStopButton.setEnabled(true);
 
     //todo check required
-    if (mMarkerpointList.size() > 2) {
-      mMap.clear();
-      mMarkerpointList.clear();
-      mMap.addMarker(new MarkerOptions().position(new LatLng(mFinalLat, mFinalLong)));
-    }
+    //if (mMarkerpointList.size() > 2) {
+    //  mMap.clear();
+    //  mMarkerpointList.clear();
+    //  mMap.addMarker(new MarkerOptions().position(new LatLng(mFinalLat, mFinalLong)));
+    //}
 
   }
 
@@ -198,7 +195,7 @@ public class MapsActivity extends FragmentActivity
     smartLocation.location(provider).start(this);
     smartLocation.activity().start(this);
 
-    if (mIsMapReady && getLastKnownLocation() != null) {
+    if (mIsMapReady) {
       mCurrentLat = getLastKnownLocation().getLatitude();
       mCurrentLong = getLastKnownLocation().getLongitude();
       setCamera(mCurrentLat, mCurrentLong);
