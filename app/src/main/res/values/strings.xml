@@ -5,5 +5,5 @@
   <string name="text_button_stop">Stop shift</string>
   <string name="text_progress">Sit back and relax,I\'m thinking :)</string>
   <string name="text_someting_bad">something bad happened,please try again</string>
-  <string name="text_location_start">starting location tracking ..</string>
+  <string name="text_tracking_start">location tracking started</string>
 </resources>

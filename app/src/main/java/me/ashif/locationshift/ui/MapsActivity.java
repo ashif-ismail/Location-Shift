@@ -15,6 +15,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -50,7 +51,8 @@ import static me.ashif.locationshift.utils.MapUtils.decodePoly;
  */
 
 public class MapsActivity extends FragmentActivity
-    implements OnMapReadyCallback, OnLocationUpdatedListener, OnActivityUpdatedListener {
+    implements OnMapReadyCallback, OnLocationUpdatedListener, OnActivityUpdatedListener,
+    DataManager.OnResponseCompleted {
 
   private static final int LOCATION_PERMISSION_ID = 007;
   private static final String TAG = MapsActivity.class.getSimpleName();
@@ -64,6 +66,8 @@ public class MapsActivity extends FragmentActivity
   private Polyline mPolyline;
   private ArrayList<LatLng> mMarkerpointList;
   private ConnectionUtils mConnectionUtils;
+  private boolean mIsMapReady;
+  private DistanceResponse mDistanceResponse;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -77,7 +81,12 @@ public class MapsActivity extends FragmentActivity
     initViews();
     initObjects();
 
-    checkIfLocationEnabled();
+    if (ContextCompat.checkSelfPermission(MapsActivity.this,
+        Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+      ActivityCompat.requestPermissions(MapsActivity.this,
+          new String[] { Manifest.permission.ACCESS_FINE_LOCATION }, LOCATION_PERMISSION_ID);
+      return;
+    }
   }
 
   private boolean checkIfLocationEnabled() {
@@ -101,10 +110,8 @@ public class MapsActivity extends FragmentActivity
     startActivity(myIntent);
   }
 
-  private void geLastLocationAndSetCamera(Location lastLocation) {
-
+  private void setCamera(double lat, double lng) {
     mDialogUtils.ShowProgressDialog(getString(R.string.text_progress));
-
     final Handler handler = new Handler();
     final Runnable runnable = new Runnable() {
       @Override public void run() {
@@ -112,29 +119,19 @@ public class MapsActivity extends FragmentActivity
       }
     };
     handler.postDelayed(runnable, 3000);
-    if (lastLocation != null) {
 
-      mCurrentLat = lastLocation.getLatitude();
-      mCurrentLong = lastLocation.getLongitude();
-
-      LatLng currentLatLng = new LatLng(mCurrentLat, mCurrentLong);
-      mMap.addMarker(new MarkerOptions().position(currentLatLng).title("Current Location"));
-
-      CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(mCurrentLat, mCurrentLong));
-      CameraUpdate zoom = CameraUpdateFactory.zoomTo(15);
-
-      mMap.moveCamera(center);
-      mMap.animateCamera(zoom);
-
-      mMarkerpointList.add(new LatLng(mCurrentLat, mCurrentLong));
-    } else {
-      mDialogUtils.showToast("Last location couldn't be retreived,please try again");
-    }
+    LatLng currentLatLng = new LatLng(lat, lng);
+    mMap.addMarker(new MarkerOptions().position(currentLatLng).title("Current Location"));
+    CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(mCurrentLat, mCurrentLong));
+    CameraUpdate zoom = CameraUpdateFactory.zoomTo(15);
+    mMap.moveCamera(center);
+    mMap.animateCamera(zoom);
+    mMarkerpointList.add(currentLatLng);
   }
 
   private void initObjects() {
     mDialogUtils = new DialogUtils(MapsActivity.this);
-    mDataManager = new DataManager();
+    mDataManager = new DataManager(this);
     mMarkerpointList = new ArrayList<>();
     mConnectionUtils = new ConnectionUtils(MapsActivity.this);
   }
@@ -147,27 +144,16 @@ public class MapsActivity extends FragmentActivity
   @Override public void onMapReady(GoogleMap googleMap) {
     mMap = googleMap;
     mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-    mMap.setTrafficEnabled(true);
-    geLastLocationAndSetCamera(getLastKnownLocation());
+    mMap.setTrafficEnabled(false);
+    mIsMapReady = true;
   }
 
   @OnClick(R.id.button_start) public void onStartLocationClicked() {
-    mDialogUtils.showToast(getString(R.string.text_location_start));
-    if (ContextCompat.checkSelfPermission(MapsActivity.this,
-        Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-      ActivityCompat.requestPermissions(MapsActivity.this,
-          new String[] { Manifest.permission.ACCESS_FINE_LOCATION }, LOCATION_PERMISSION_ID);
-      return;
-    }
+    mDialogUtils.showToast(getString(R.string.text_tracking_start));
     startLocationTrack();
     //disable this button and enable stop button
     mStartButton.setEnabled(false);
     mStopButton.setEnabled(true);
-
-    //if (mMarkerpointList.size() > 1){
-    //  mMap.clear();
-    //  mMarkerpointList.clear();
-    //}
   }
 
   @OnClick(R.id.button_stop) public void onStopLocationClicked() {
@@ -199,14 +185,18 @@ public class MapsActivity extends FragmentActivity
   }
 
   private void startLocationTrack() {
-
     LocationGooglePlayServicesProvider provider = new LocationGooglePlayServicesProvider();
     provider.setCheckLocationSettings(true);
-
     SmartLocation smartLocation = new SmartLocation.Builder(this).logging(false).build();
-
     smartLocation.location(provider).start(this);
     smartLocation.activity().start(this);
+
+    if (mIsMapReady && getLastKnownLocation() != null) {
+      mCurrentLat = getLastKnownLocation().getLatitude();
+      mCurrentLong = getLastKnownLocation().getLongitude();
+      setCamera(mCurrentLat, mCurrentLong);
+      mIsMapReady = false;
+    }
   }
 
   @Override public void onLocationUpdated(Location location) {
@@ -219,23 +209,17 @@ public class MapsActivity extends FragmentActivity
   }
 
   public void getETADetails() {
-    DistanceResponse distanceResponse = mDataManager.getRouteDetails("metric",
+    mDataManager.getRouteDetails("metric",
         String.valueOf(mCurrentLat) + "," + String.valueOf(mCurrentLong),
         String.valueOf(mFinalLat) + "," + String.valueOf(mFinalLong), "walking");
-    if (distanceResponse == null) {
-      mDialogUtils.showToast(getString(R.string.text_someting_bad));
-    } else {
-      setFinalMarker();
-      addPolyline(distanceResponse);
-    }
+    mDialogUtils.ShowProgressDialog(getString(R.string.text_progress));
   }
 
   private void setFinalMarker() {
     LatLng finalLatLong = new LatLng(mFinalLat, mFinalLong);
     MarkerOptions markerOptions = new MarkerOptions();
     markerOptions.position(finalLatLong);
-    markerOptions.title("Final Position");
-    markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
+    markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
     Marker finalLocationMarker = mMap.addMarker(markerOptions);
 
     mMarkerpointList.add(finalLatLong);
@@ -255,10 +239,11 @@ public class MapsActivity extends FragmentActivity
             distanceResponse.getRoutes().get(0).getOverview_polyline().getPoints();
         List<LatLng> list = decodePoly(encodedString);
         mPolyline = mMap.addPolyline(
-            new PolylineOptions().addAll(list).width(20).color(Color.GREEN).geodesic(true));
+            new PolylineOptions().addAll(list).width(20).color(Color.RED).geodesic(true));
       }
     } catch (Exception e) {
       e.printStackTrace();
+      Log.d(TAG, "addPolyline: " + e.getMessage());
     }
   }
 
@@ -287,5 +272,13 @@ public class MapsActivity extends FragmentActivity
       }
     }
     return bestLocation;
+  }
+
+  @Override public void responseCompleted(DistanceResponse distanceResponse) {
+    //network call completed
+    setFinalMarker();
+    addPolyline(distanceResponse);
+    //dismiss the dialog,if any
+    mDialogUtils.dismissProgress();
   }
 }

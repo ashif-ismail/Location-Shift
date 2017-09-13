@@ -18,8 +18,8 @@ public class ConnectionUtils {
   }
 
   public boolean isNetworkAvailable() {
-    ConnectivityManager connectivityManager
-        = (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
+    ConnectivityManager connectivityManager =
+        (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
     NetworkInfo activeNetworkInfo = null;
     if (connectivityManager != null) {
       activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
