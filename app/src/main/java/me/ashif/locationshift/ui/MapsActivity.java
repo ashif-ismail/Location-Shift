@@ -121,7 +121,7 @@ public class MapsActivity extends FragmentActivity
     handler.postDelayed(runnable, 3000);
 
     LatLng currentLatLng = new LatLng(lat, lng);
-    mMap.addMarker(new MarkerOptions().position(currentLatLng).title("Current Location"));
+    mMap.addMarker(new MarkerOptions().position(currentLatLng));
     CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(mCurrentLat, mCurrentLong));
     CameraUpdate zoom = CameraUpdateFactory.zoomTo(15);
     mMap.moveCamera(center);
